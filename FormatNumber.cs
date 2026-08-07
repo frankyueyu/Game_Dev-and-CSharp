@@ -11,6 +11,7 @@ class Program
     {
         int originalLength = x.Length;
         int j = 0;
+    
         for (int i = 1; i <= originalLength; i++)
         {
             if (i % 3 == 0)
