@@ -1,12 +1,13 @@
 using System;
 using System.Numerics;
-class Program
+
+class Formatting
 {
-    static void Main(string[] args)
-    {
-        BigInteger bigNumber = BigInteger.Parse("999999999999999999999999999");
-        Console.WriteLine(FormatNumber(bigNumber));
-    }
+    // static void Main(string[] args)
+    // {
+    //     BigInteger bigNumber = BigInteger.Parse("999999999999999999999999999");
+    //     Console.WriteLine(FormatNumber(bigNumber));
+    // }
     public static string FormatNumber(string x)
     {
         int originalLength = x.Length;
