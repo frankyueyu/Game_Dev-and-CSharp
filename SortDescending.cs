@@ -22,7 +22,7 @@ class Sort
                 }
             }
             sorted = [.. sorted, biggest];
-            nums[nums.IndexOf(biggest)] = nums[nums.IndexOf(smallest)] - 1;
+            nums[nums.IndexOf(biggest)] = smallest - 1;
             // int setindex = (nums.IndexOf(biggest) != 0) ? 0 : 1;
             // nums[nums.IndexOf(biggest)] = nums[setindex];
         }
