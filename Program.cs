@@ -1,8 +1,18 @@
 using System;
+using System.IO;
+
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        StupidStuff.InfiniteLoop();
+        string path = "test.txt";
+
+        File.WriteAllText(path, "Hello!");
+
+        Console.WriteLine(File.GetCreationTime(path));
+
+        File.SetCreationTime(path, new DateTime(2030, 1, 1));
+
+        Console.WriteLine(File.GetCreationTime(path));
     }
 }
