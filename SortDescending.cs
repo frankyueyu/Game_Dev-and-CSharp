@@ -28,7 +28,7 @@ class Sort
         }
         foreach (int k in sorted)
         {
-            Console.Write(k.ToString() + "\n");
+            Console.Write(k.ToString() + " ");
         }
     }
 }
