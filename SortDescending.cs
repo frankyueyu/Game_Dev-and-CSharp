@@ -1,6 +1,8 @@
+using System;
+
 class Sort
 {
-    public static int[] SortDescending(int n, int[] nums)
+    public static void SortDescending(int n, int[] nums)
     {
         int[] sorted = [];
         for (int i = 0; i < nums.Length; i++)
@@ -24,6 +26,9 @@ class Sort
             // int setindex = (nums.IndexOf(biggest) != 0) ? 0 : 1;
             // nums[nums.IndexOf(biggest)] = nums[setindex];
         }
-        return sorted;
+        foreach (int k in sorted)
+        {
+            Console.Write(k.ToString() + "\n");
+        }
     }
 }

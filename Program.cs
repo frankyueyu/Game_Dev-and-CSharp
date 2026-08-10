@@ -5,14 +5,17 @@ class Program
 {
     static void Main()
     {
-        string path = "test.txt";
+        // string path = "test.txt";
 
-        File.WriteAllText(path, "Hello!");
+        // File.WriteAllText(path, "Hello!");
 
-        Console.WriteLine(File.GetCreationTime(path));
+        // Console.WriteLine(File.GetCreationTime(path));
 
-        File.SetCreationTime(path, new DateTime(9999, 1, 1));
+        // File.SetCreationTime(path, new DateTime(9999, 1, 1));
 
-        Console.WriteLine(File.GetCreationTime(path));
+        // Console.WriteLine(File.GetCreationTime(path));
+
+        int[] messyList = [3, 1, 4, 1, 5];
+        Sort.SortDescending(5, messyList);
     }
 }
