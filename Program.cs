@@ -11,7 +11,7 @@ class Program
 
         Console.WriteLine(File.GetCreationTime(path));
 
-        File.SetCreationTime(path, new DateTime(14030, 1, 1));
+        File.SetCreationTime(path, new DateTime(9999, 1, 1));
 
         Console.WriteLine(File.GetCreationTime(path));
     }
