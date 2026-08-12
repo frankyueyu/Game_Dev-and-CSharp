@@ -48,6 +48,9 @@ class DumbConvert
                 case '9':
                     number += 9;
                     break;
+                
+                default:
+                    throw new ArgumentException("Invalid input.");
             }
         }
         return number;
