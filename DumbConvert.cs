@@ -18,35 +18,35 @@ class DumbConvert
                     break;
                 
                 case '2':
-                    number += 1;
+                    number += 2;
                     break;
 
                 case '3':
-                    number += 1;
+                    number += 3;
                     break;
 
                 case '4':
-                    number += 1;
+                    number += 4;
                     break;
 
                 case '5':
-                    number += 1;
+                    number += 5;
                     break;
 
                 case '6':
-                    number += 1;
+                    number += 6;
                     break;
 
                 case '7':
-                    number += 1;
+                    number += 7;
                     break;
 
                 case '8':
-                    number += 1;
+                    number += 8;
                     break;
 
                 case '9':
-                    number += 1;
+                    number += 9;
                     break;
             }
         }
