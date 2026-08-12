@@ -15,7 +15,10 @@ class Program
 
         // Console.WriteLine(File.GetCreationTime(path));
 
-        int[] messyList = [3, 1, 4, 1, 5];
-        Sort.SortDescending(5, messyList);
+        // int[] messyList = [3, 1, 4, 1, 5];
+        // Sort.SortDescending(5, messyList);
+
+        string test = "1234";
+        Console.WriteLine(DumbConvert.ToIntThirtyTwo(test));
     }
 }
