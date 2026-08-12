@@ -19,6 +19,8 @@ class Program
         // Sort.SortDescending(5, messyList);
 
         string test = "1234";
-        Console.WriteLine(DumbConvert.ToIntThirtyTwo(test));
+        int converted = DumbConvert.ToIntThirtyTwo(test);
+        Console.WriteLine(converted);
+        Console.WriteLine(converted.GetType());
     }
 }
