@@ -31,7 +31,7 @@ class Program
         {   
             while (true)
             {
-                Console.Write("Enter letter: ");
+                Console.Write("Enter letter (\"stop\" to stop): ");
                 newLetter = Console.ReadLine();
 
                 if (newLetter == "stop")
@@ -41,10 +41,23 @@ class Program
                 letters[i].Add(newLetter);
             }
 
-            Console.WriteLine(letters[i]);
+            foreach (string j in letters[i])
+            {
+                Console.Write(j + " ");
+            }
+            Console.Write("\n");
         }
 
-        Console.WriteLine(letters);
+        foreach (List<string> i in letters)
+        {
+            foreach (string j in i)
+            {
+                Console.Write(j + " ");
+            }
+
+        }
+        Console.Write("\n");
+        Console.Write("\n");
         Console.Write("done\ncontinue? (yes/no) ");
         if (Console.ReadLine() == "yes")
         {
@@ -53,7 +66,7 @@ class Program
                             [.. arrayLetters[0].Select(s => s[0])]];
             
             Console.WriteLine("Enter morse: ");
-            Code.MorseToKeyboardSection(Console.ReadLine(), arrayChars[0], arrayChars[1]);
+            Console.WriteLine(Code.MorseToKeyboardSection(Console.ReadLine(), arrayChars[0], arrayChars[1]));
         }
     }
 }
