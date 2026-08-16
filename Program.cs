@@ -57,8 +57,8 @@ class Program
 
         }
         Console.Write("\n");
-        Console.Write("\n");
-        Console.Write("done\ncontinue? (yes/no) ");
+
+        Console.Write("done\n\ncontinue? (yes/no) ");
         if (Console.ReadLine() == "yes")
         {
             string[][] arrayLetters = [[.. letters[0]], [.. letters[1]]];
