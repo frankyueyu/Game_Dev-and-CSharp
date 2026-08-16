@@ -52,7 +52,7 @@ class Program
             char[][] arrayChars = [[.. arrayLetters[0].Select(s => s[0])],
                             [.. arrayLetters[0].Select(s => s[0])]];
             
-            Console.WriteLine("Enter morse: ")
+            Console.WriteLine("Enter morse: ");
             Code.MorseToKeyboardSection(Console.ReadLine(), arrayChars[0], arrayChars[1]);
         }
     }
