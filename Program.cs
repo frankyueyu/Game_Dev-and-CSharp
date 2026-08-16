@@ -63,7 +63,7 @@ class Program
         {
             string[][] arrayLetters = [[.. letters[0]], [.. letters[1]]];
             char[][] arrayChars = [[.. arrayLetters[0].Select(s => s[0])],
-                            [.. arrayLetters[0].Select(s => s[0])]];
+                            [.. arrayLetters[1].Select(s => s[0])]];
             
             Console.Write("Enter morse: ");
             Console.WriteLine(Code.MorseToKeyboardSection(Console.ReadLine(), arrayChars[0], arrayChars[1]));
