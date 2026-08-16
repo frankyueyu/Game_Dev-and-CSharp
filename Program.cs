@@ -18,9 +18,32 @@ class Program
         // int[] messyList = [3, 1, 4, 1, 5];
         // Sort.SortDescending(5, messyList);
 
-        string test = "1234";
-        int converted = DumbConvert.ToIntThirtyTwo(test);
-        Console.WriteLine(converted);
-        Console.WriteLine(converted.GetType());
+        // string test = "1234";
+        // int converted = DumbConvert.ToIntThirtyTwo(test);
+        // Console.WriteLine(converted);
+        // Console.WriteLine(converted.GetType());
+
+        List<string> letters = [];
+        string newLetter = "";
+
+        while (true)
+        {
+            Console.Write("Enter letter: ");
+            newLetter = Console.ReadLine();
+
+            if (newLetter == "stop")
+            {
+                break;
+            }
+            letters.Add(newLetter);
+        }
+
+        Console.WriteLine(letters);
+        Console.WriteLine("done");
+
+        if (Console.ReadLine() == "yes")
+        {
+            Code.MorseToKeyboardSection(letters);
+        }
     }
 }
