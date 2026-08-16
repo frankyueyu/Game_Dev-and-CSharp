@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Runtime.InteropServices.Marshalling;
 
 class Program
 {
@@ -44,14 +45,14 @@ class Program
         }
 
         Console.WriteLine(letters);
-        Console.WriteLine("done");
-
+        Console.Write("done\ncontinue? (yes/no) ");
         if (Console.ReadLine() == "yes")
         {
             string[][] arrayLetters = [[.. letters[0]], [.. letters[1]]];
             char[][] arrayChars = [[.. arrayLetters[0].Select(s => s[0])],
                             [.. arrayLetters[0].Select(s => s[0])]];
-
+            
+            Console.WriteLine("Enter morse: ")
             Code.MorseToKeyboardSection(Console.ReadLine(), arrayChars[0], arrayChars[1]);
         }
     }
