@@ -23,19 +23,24 @@ class Program
         // Console.WriteLine(converted);
         // Console.WriteLine(converted.GetType());
 
-        List<string> letters = [];
+        List<List<string>> letters = [[], []];
         string newLetter = "";
 
-        while (true)
-        {
-            Console.Write("Enter letter: ");
-            newLetter = Console.ReadLine();
-
-            if (newLetter == "stop")
+        for (int i = 0; i < letters.Count; i++)
+        {   
+            while (true)
             {
-                break;
+                Console.Write("Enter letter: ");
+                newLetter = Console.ReadLine();
+
+                if (newLetter == "stop")
+                {
+                    break;
+                }
+                letters[i].Add(newLetter);
             }
-            letters.Add(newLetter);
+
+            Console.WriteLine(letters[i]);
         }
 
         Console.WriteLine(letters);
@@ -43,7 +48,11 @@ class Program
 
         if (Console.ReadLine() == "yes")
         {
-            Code.MorseToKeyboardSection(letters);
+            string[][] arrayLetters = [[.. letters[0]], [.. letters[1]]];
+            char[][] arrayChars = [[.. arrayLetters[0].Select(s => s[0])],
+                            [.. arrayLetters[0].Select(s => s[0])]];
+
+            Code.MorseToKeyboardSection(Console.ReadLine(), arrayChars[0], arrayChars[1]);
         }
     }
 }
