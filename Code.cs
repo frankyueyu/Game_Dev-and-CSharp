@@ -2,7 +2,7 @@ class Code
 {
     public static string MorseToKeyboardSection(string morse, char[] keyboardLeft, char[] keyboardRight)
     {
-        Random random = new Random();
+        Random random = new();
         string output = "";
 
         foreach (char i in morse)
