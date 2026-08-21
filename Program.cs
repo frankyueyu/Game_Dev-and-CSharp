@@ -25,48 +25,56 @@ class Program
         // Console.WriteLine(converted.GetType());
 
         List<List<string>> letters = [[], []];
-        string newLetter = "";
+        // string newLetter = "";
 
-        for (int i = 0; i < letters.Count; i++)
-        {   
-            while (true)
-            {
-                Console.Write("Enter letter (\"stop\" to stop): ");
-                newLetter = Console.ReadLine();
+        // for (int i = 0; i < letters.Count; i++)
+        // {   
+        //     while (true)
+        //     {
+        //         Console.Write("Enter letter (\"stop\" to stop): ");
+        //         newLetter = Console.ReadLine();
 
-                if (newLetter == "stop")
-                {
-                    break;
-                }
-                letters[i].Add(newLetter);
-            }
+        //         if (newLetter == "stop")
+        //         {
+        //             break;
+        //         }
+        //         letters[i].Add(newLetter);
+        //     }
 
-            foreach (string j in letters[i])
-            {
-                Console.Write(j + " ");
-            }
-            Console.Write("\n");
-        }
+        //     foreach (string j in letters[i])
+        //     {
+        //         Console.Write(j + " ");
+        //     }
+        //     Console.Write("\n");
+        // }
 
-        foreach (List<string> i in letters)
-        {
-            foreach (string j in i)
-            {
-                Console.Write(j + " ");
-            }
+        // foreach (List<string> i in letters)
+        // {
+        //     foreach (string j in i)
+        //     {
+        //         Console.Write(j + " ");
+        //     }
 
-        }
-        Console.Write("\n");
+        // }
+        // Console.Write("\n");
 
-        Console.Write("done\n\ncontinue? (yes/no) ");
-        if (Console.ReadLine() == "yes")
-        {
-            string[][] arrayLetters = [[.. letters[0]], [.. letters[1]]];
-            char[][] arrayChars = [[.. arrayLetters[0].Select(s => s[0])],
-                            [.. arrayLetters[1].Select(s => s[0])]];
+        // Console.Write("done\n\ncontinue? (yes/no) ");
+        // if (Console.ReadLine() == "yes")
+        // {
+        //     string[][] arrayLetters = [[.. letters[0]], [.. letters[1]]];
+        //     char[][] arrayChars = [[.. arrayLetters[0].Select(s => s[0])],
+        //                     [.. arrayLetters[1].Select(s => s[0])]];
             
-            Console.Write("Enter morse: ");
-            Console.WriteLine(Code.MorseToKeyboardSection(Console.ReadLine(), arrayChars[0], arrayChars[1]));
-        }
+        //     Console.Write("Enter morse: ");
+        //     Console.WriteLine(Code.MorseToKeyboardSection(Console.ReadLine(), arrayChars[0], arrayChars[1]));
+        // }
+
+        Program p = new();
+        p.PrettyPrint(3);
+    }
+
+    void PrettyPrint<T>(T x)
+    {
+        Console.WriteLine("here is the thing: " + x);
     }
 }

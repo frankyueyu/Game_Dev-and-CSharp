@@ -38,4 +38,17 @@ class Code
         }
         return output;
     }
+
+    public static string RandomText(string[] keyboard, int length)
+    {
+        string output = "";
+        Random random = new();
+
+        for (int i = 0; i < length; i++)
+        {
+            output += keyboard[random.Next(keyboard.Length)];
+        }
+
+        return output;
+    }
 }
